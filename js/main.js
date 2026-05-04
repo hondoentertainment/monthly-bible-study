@@ -1,8 +1,11 @@
 (function () {
-  const cfg = window.MONTHLY_BIBLE_STUDY_CONFIG || { partifulUrl: 'https://partiful.com/', galleryPhotos: [] };
+  const cfg = window.MONTHLY_BIBLE_STUDY_CONFIG || {
+    partifulUrl: 'https://partiful.com/e/69cSAoPoO7TdA2RClIDq?',
+    galleryPhotos: [],
+  };
 
   /** Sync all Partiful links from config */
-  document.querySelectorAll('a[href="https://partiful.com/"]').forEach(function (a) {
+  document.querySelectorAll('a.partiful-invite').forEach(function (a) {
     a.href = cfg.partifulUrl || a.href;
   });
 

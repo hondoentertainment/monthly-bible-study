@@ -3,7 +3,7 @@
  */
 window.MONTHLY_BIBLE_STUDY_CONFIG = {
   /** Your Partiful event or profile link */
-  partifulUrl: 'https://partiful.com/',
+  partifulUrl: 'https://partiful.com/e/69cSAoPoO7TdA2RClIDq?',
   /** Photo gallery items: use your own URLs (church photos, Unsplash with license, etc.) */
   galleryPhotos: [
     {
