@@ -430,6 +430,46 @@ img {
 }
 
 /* —— Past sessions —— */
+.passage-index {
+  background: #fff;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.35rem;
+  margin: 0 0 2rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.passage-index__title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.passage-index__list {
+  margin: 0;
+  padding: 0 0 0 1.35rem;
+  display: grid;
+  gap: 0.35rem;
+}
+
+@media (min-width: 640px) {
+  .passage-index__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.passage-index__list a {
+  font-weight: 600;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.passage-index__list a:hover,
+.passage-index__list a:focus-visible {
+  text-decoration: underline;
+}
+
 .sessions-timeline {
   display: grid;
   gap: 1.5rem;
