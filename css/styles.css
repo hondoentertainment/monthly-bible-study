@@ -12,7 +12,6 @@
   --font-sans: "Instrument Sans", system-ui, -apple-system, Segoe UI, sans-serif;
   --shadow-soft: 0 12px 40px rgba(28, 25, 23, 0.08);
   --radius: 12px;
-  --header-h: 4.25rem;
 }
 
 *,
@@ -79,23 +78,48 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  min-height: var(--header-h);
+  min-height: 4.75rem;
+  padding-block: 0.65rem;
 }
 
 .logo {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
   text-decoration: none;
   color: var(--color-ink);
   font-family: var(--font-serif);
   font-weight: 600;
-  font-size: 1.35rem;
+  font-size: 1rem;
+  max-width: min(20rem, 55vw);
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.08rem;
+  line-height: 1.15;
+}
+
+.logo__line--primary {
+  font-size: clamp(1rem, 2.8vw, 1.22rem);
+  font-weight: 700;
+}
+
+.logo__line--sub {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-accent);
+  line-height: 1.25;
 }
 
 .logo__mark {
   color: var(--color-accent);
   font-size: 1.1rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
 }
 
 .nav__toggle {
@@ -157,7 +181,7 @@ img {
     position: absolute;
     left: 0;
     right: 0;
-    top: var(--header-h);
+    top: 100%;
     flex-direction: column;
     align-items: stretch;
     padding: 1rem 1.25rem 1.25rem;
@@ -212,6 +236,14 @@ img {
   margin: 0 0 1rem;
 }
 
+.hero .eyebrow {
+  text-transform: none;
+  letter-spacing: 0.06em;
+  font-size: clamp(0.88rem, 2vw, 1rem);
+  font-family: var(--font-sans);
+  font-weight: 600;
+}
+
 .hero__title {
   font-family: var(--font-serif);
   font-size: clamp(2.35rem, 5vw, 3.5rem);
@@ -219,6 +251,15 @@ img {
   line-height: 1.12;
   margin: 0 0 1rem;
   color: var(--color-ink);
+}
+
+.hero__edition {
+  display: block;
+  margin-top: 0.4rem;
+  font-size: clamp(1.75rem, 3.8vw, 2.55rem);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-accent);
 }
 
 .hero__lede {
@@ -598,9 +639,18 @@ img {
 
 .site-footer__brand {
   font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-size: clamp(1.05rem, 3vw, 1.35rem);
   font-weight: 700;
   margin: 0 0 0.5rem;
+  line-height: 1.35;
+}
+
+.site-footer__edition {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.04em;
 }
 
 .site-footer__copy {
