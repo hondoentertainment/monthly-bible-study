@@ -1,17 +1,26 @@
-/* —— Design tokens —— */
+/* —— Design tokens —— Christian-liturgical-inspired palette —— */
 :root {
-  --color-ink: #1c1917;
-  --color-ink-muted: #44403c;
-  --color-cream: #faf7f2;
-  --color-cream-dark: #f0ebe3;
-  --color-accent: #6b2d3c;
-  --color-accent-hover: #542432;
-  --color-gold: #b8860b;
-  --color-line: #d6d3cd;
-  --font-serif: "Cormorant Garamond", "Palatino Linotype", Palatino, Georgia, serif;
+  --color-ink: #1a1814;
+  --color-ink-muted: #494238;
+  --color-parchment: #faf8f2;
+  --color-parchment-dim: #ebe4d9;
+  --color-cream: var(--color-parchment);
+  --color-cream-dark: var(--color-parchment-dim);
+  --color-accent: #413670;
+  --color-accent-hover: #362f5f;
+  --color-sacred-deep: #1a2740;
+  --color-gold: #9f7b2f;
+  --color-gold-mid: #c49a46;
+  --color-glow-warm: rgba(196, 154, 70, 0.18);
+  --color-glow-cool: rgba(65, 54, 112, 0.12);
+  --color-line: #d9d1c5;
+  --font-display: "Cormorant Garamond", Palatino, Georgia, serif;
+  --font-body: Lora, "Palatino Linotype", Palatino, Georgia, serif;
   --font-sans: "Instrument Sans", system-ui, -apple-system, Segoe UI, sans-serif;
-  --shadow-soft: 0 12px 40px rgba(28, 25, 23, 0.08);
+  --shadow-soft: 0 14px 48px rgba(26, 39, 64, 0.09);
+  --shadow-card: 0 10px 40px rgba(26, 39, 64, 0.07), 0 0 1px rgba(159, 123, 47, 0.12);
   --radius: 12px;
+  --font-serif: var(--font-display);
 }
 
 *,
@@ -26,11 +35,22 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 1.05rem;
-  line-height: 1.65;
+  line-height: 1.7;
   color: var(--color-ink);
-  background: var(--color-cream);
+  background-color: var(--color-cream);
+  background-image:
+    linear-gradient(rgba(255, 253, 248, 0.92), rgba(255, 253, 248, 0.92)),
+    repeating-linear-gradient(
+      -12deg,
+      transparent,
+      transparent 11px,
+      rgba(159, 123, 47, 0.03) 11px,
+      rgba(159, 123, 47, 0.03) 12px
+    ),
+    radial-gradient(ellipse 85% 50% at 50% -5%, rgba(196, 154, 70, 0.08), transparent 55%);
+  background-attachment: fixed;
 }
 
 img {
@@ -53,7 +73,7 @@ img {
   left: -9999px;
   z-index: 1000;
   padding: 0.5rem 1rem;
-  background: var(--color-ink);
+  background: var(--color-sacred-deep);
   color: var(--color-cream);
   text-decoration: none;
 }
@@ -61,6 +81,8 @@ img {
 .skip-link:focus {
   left: 1rem;
   top: 1rem;
+  outline: 2px solid var(--color-gold-mid);
+  outline-offset: 2px;
 }
 
 /* —— Header —— */
@@ -68,9 +90,19 @@ img {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(250, 247, 242, 0.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--color-line);
+  background: linear-gradient(
+    to bottom,
+    rgba(254, 252, 248, 0.97),
+    rgba(251, 248, 242, 0.94)
+  );
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(159, 123, 47, 0.25);
+}
+
+.nav__toggle,
+.nav__list,
+.btn {
+  font-family: var(--font-sans);
 }
 
 .site-header__inner {
@@ -88,7 +120,7 @@ img {
   gap: 0.5rem;
   text-decoration: none;
   color: var(--color-ink);
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: 1rem;
   max-width: min(20rem, 55vw);
@@ -104,19 +136,20 @@ img {
 .logo__line--primary {
   font-size: clamp(1rem, 2.8vw, 1.22rem);
   font-weight: 700;
+  color: var(--color-sacred-deep);
 }
 
 .logo__line--sub {
   font-family: var(--font-sans);
   font-size: 0.65rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.06em;
   color: var(--color-accent);
   line-height: 1.25;
 }
 
 .logo__mark {
-  color: var(--color-accent);
+  color: var(--color-gold-mid);
   font-size: 1.1rem;
   margin-top: 0.2rem;
   flex-shrink: 0;
@@ -160,15 +193,23 @@ img {
   display: inline-block;
   padding: 0.45rem 0.9rem;
   border-radius: 999px;
-  background: var(--color-accent);
-  color: #fff !important;
+  background: linear-gradient(
+    165deg,
+    var(--color-accent) 0%,
+    var(--color-accent-hover) 100%
+  );
+  box-shadow:
+    inset 0 0 0 1px rgba(196, 154, 70, 0.35),
+    0 2px 14px rgba(65, 54, 112, 0.22);
+  color: #fffcf7 !important;
   font-weight: 600;
 }
 
 .nav__cta:hover,
 .nav__cta:focus-visible {
   background: var(--color-accent-hover);
-  color: #fff !important;
+  filter: brightness(1.06);
+  color: #fffcf7 !important;
 }
 
 @media (max-width: 767px) {
@@ -215,8 +256,21 @@ img {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 55% at 50% -10%, rgba(107, 45, 60, 0.12), transparent 55%),
-    linear-gradient(180deg, var(--color-cream-dark), var(--color-cream));
+    radial-gradient(ellipse 90% 60% at 50% -15%, rgba(196, 154, 70, 0.22), transparent 58%),
+    radial-gradient(ellipse 65% 45% at 100% 20%, rgba(65, 54, 112, 0.1), transparent 50%),
+    radial-gradient(ellipse 55% 40% at 0% 60%, rgba(65, 54, 112, 0.07), transparent 45%),
+    linear-gradient(185deg, #f6efe4 0%, var(--color-cream) 42%, #faf8f3 100%);
+  pointer-events: none;
+}
+
+.hero__bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image:
+    radial-gradient(circle at 50% 0%, rgba(26, 24, 20, 0.5) 0, transparent 40%),
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(65, 54, 112, 0.06) 2px, rgba(65, 54, 112, 0.06) 3px);
   pointer-events: none;
 }
 
@@ -237,20 +291,21 @@ img {
 }
 
 .hero .eyebrow {
-  text-transform: none;
-  letter-spacing: 0.06em;
-  font-size: clamp(0.88rem, 2vw, 1rem);
+  letter-spacing: 0.14em;
+  font-size: clamp(0.8rem, 1.85vw, 0.93rem);
   font-family: var(--font-sans);
   font-weight: 600;
+  color: var(--color-gold);
+  text-transform: uppercase;
 }
 
 .hero__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(2.35rem, 5vw, 3.5rem);
   font-weight: 700;
   line-height: 1.12;
   margin: 0 0 1rem;
-  color: var(--color-ink);
+  color: var(--color-sacred-deep);
 }
 
 .hero__edition {
@@ -259,7 +314,7 @@ img {
   font-size: clamp(1.75rem, 3.8vw, 2.55rem);
   font-style: italic;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-sacred-deep);
 }
 
 .hero__lede {
@@ -300,26 +355,34 @@ img {
 }
 
 .btn--primary {
-  background: var(--color-accent);
-  color: #fff;
+  background: linear-gradient(
+    165deg,
+    var(--color-accent) 0%,
+    var(--color-accent-hover) 100%
+  );
+  color: #fffcf7;
+  box-shadow:
+    0 4px 22px rgba(65, 54, 112, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12);
 }
 
 .btn--primary:hover,
 .btn--primary:focus-visible {
-  background: var(--color-accent-hover);
-  color: #fff;
+  filter: brightness(1.06);
 }
 
 .btn--ghost {
-  background: transparent;
-  color: var(--color-ink);
-  border-color: var(--color-line);
+  background: rgba(255, 253, 248, 0.55);
+  color: var(--color-sacred-deep);
+  border-color: rgba(159, 123, 47, 0.45);
 }
 
 .btn--ghost:hover,
 .btn--ghost:focus-visible {
   border-color: var(--color-accent);
   color: var(--color-accent);
+  background: rgba(255, 255, 255, 0.75);
 }
 
 /* —— Sections —— */
@@ -328,15 +391,37 @@ img {
 }
 
 .section--muted {
-  background: var(--color-cream-dark);
-  border-block: 1px solid var(--color-line);
+  background:
+    linear-gradient(180deg, rgba(251, 248, 242, 0.65) 0%, var(--color-cream-dark) 30%, var(--color-cream-dark) 100%);
+  border-block: 1px solid rgba(159, 123, 47, 0.15);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -1px 0 rgba(159, 123, 47, 0.08);
 }
 
 .section__title {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(2rem, 3vw, 2.5rem);
   font-weight: 700;
   margin: 0 0 0.75rem;
+  color: var(--color-sacred-deep);
+  letter-spacing: 0.01em;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section__title::after {
+  content: "";
+  display: block;
+  width: 3.25rem;
+  height: 3px;
+  margin-top: 0.65rem;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    var(--color-gold-mid),
+    rgba(196, 154, 70, 0.15)
+  );
 }
 
 .section__intro {
@@ -365,8 +450,9 @@ img {
 }
 
 .info-list__label {
+  font-family: var(--font-sans);
   font-weight: 600;
-  color: var(--color-ink);
+  color: var(--color-sacred-deep);
   display: inline-block;
   min-width: 5rem;
 }
@@ -379,18 +465,23 @@ img {
 }
 
 .church-card {
-  background: #fff;
+  background: linear-gradient(
+    180deg,
+    #fffefb 0%,
+    #fffcf9 100%
+  );
   border: 1px solid var(--color-line);
+  border-top: 4px solid var(--color-gold-mid);
   border-radius: var(--radius);
   padding: 1.35rem 1.35rem 1rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-card);
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
 }
 
 .church-card__name {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: 1.35rem;
   margin: 0;
   font-weight: 700;
@@ -418,13 +509,19 @@ img {
 
 /* —— Study passages —— */
 .study-passages {
-  background: #fff;
-  border: 1px solid var(--color-line);
+  background:
+    radial-gradient(
+      ellipse 120% 100% at 0% 0%,
+      rgba(196, 154, 70, 0.08),
+      transparent 55%
+    ),
+    linear-gradient(180deg, #fffefb 0%, #fefcf8 100%);
+  border: 1px solid rgba(159, 123, 47, 0.22);
   border-radius: var(--radius);
-  padding: clamp(1.35rem, 3vw, 1.85rem);
+  padding: clamp(1.35rem, 3vw, 2rem);
   margin: 0 auto;
   max-width: 42rem;
-  box-shadow: var(--shadow-soft);
+  box-shadow: var(--shadow-card), inset 0 0 0 1px rgba(255, 255, 255, 0.7);
 }
 
 .study-passages .verse:last-child {
@@ -433,14 +530,13 @@ img {
 
 .verse {
   margin: 0 0 1.25rem;
-  padding: 0;
-  padding-left: 1rem;
-  border-left: 3px solid var(--color-accent);
-  font-family: var(--font-serif);
+  padding: 0 0 0 1.15rem;
+  border-left: 4px solid var(--color-gold-mid);
+  font-family: var(--font-display);
 }
 
 .verse--secondary {
-  border-left-color: var(--color-cream-dark);
+  border-left-color: rgba(65, 54, 112, 0.35);
 }
 
 .verse__text {
@@ -458,7 +554,8 @@ img {
   font-style: normal;
   font-size: 0.88rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-gold);
+  letter-spacing: 0.02em;
 }
 
 /* —— Photo gallery —— */
@@ -515,7 +612,9 @@ img {
   position: fixed;
   inset: 0;
   z-index: 200;
-  background: rgba(28, 25, 23, 0.88);
+  background:
+    radial-gradient(circle at 50% 30%, rgba(65, 54, 112, 0.2), transparent 55%),
+    rgba(20, 26, 40, 0.92);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -565,9 +664,13 @@ img {
 
 /* —— Footer —— */
 .site-footer {
-  padding: 2.5rem 0 3rem;
-  background: var(--color-ink);
-  color: var(--color-cream);
+  position: relative;
+  padding: 2.85rem 0 3.25rem;
+  background:
+    radial-gradient(ellipse 100% 80% at 50% -20%, rgba(196, 154, 70, 0.12), transparent 50%),
+    linear-gradient(178deg, #243656 0%, var(--color-sacred-deep) 55%, #141d2f 100%);
+  color: #f5eee4;
+  border-top: 1px solid rgba(196, 154, 70, 0.35);
 }
 
 .site-footer__inner {
@@ -575,11 +678,12 @@ img {
 }
 
 .site-footer__brand {
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
   font-size: clamp(1.05rem, 3vw, 1.35rem);
   font-weight: 700;
   margin: 0 0 0.5rem;
   line-height: 1.35;
+  letter-spacing: 0.02em;
 }
 
 .site-footer__edition {
@@ -588,14 +692,16 @@ img {
   font-weight: 600;
   font-style: italic;
   letter-spacing: 0.04em;
+  color: rgba(196, 154, 70, 0.95);
 }
 
 .site-footer__copy {
   margin: 0 0 1rem;
   font-style: italic;
-  opacity: 0.92;
-  font-family: var(--font-serif);
-  font-size: 1.1rem;
+  opacity: 0.93;
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  color: rgba(255, 252, 247, 0.92);
 }
 
 .site-footer__ref {
@@ -604,17 +710,18 @@ img {
   font-family: var(--font-sans);
   font-size: 0.85rem;
   margin-top: 0.35rem;
-  opacity: 0.75;
+  opacity: 0.78;
+  color: rgba(196, 154, 70, 0.85);
 }
 
 .footer-link {
-  color: var(--color-cream);
+  color: rgba(196, 154, 70, 0.98);
   font-weight: 600;
 }
 
 .footer-link:hover,
 .footer-link:focus-visible {
-  color: #fff;
+  color: #fcefd1;
 }
 
 /* —— FAQs —— */
@@ -627,11 +734,12 @@ img {
 }
 
 .faq-item {
-  background: #fff;
-  border: 1px solid var(--color-line);
+  background: linear-gradient(180deg, #fffefb 0%, #fefcf9 100%);
+  border: 1px solid rgba(159, 123, 47, 0.2);
   border-radius: var(--radius);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
+  border-inline-start: 3px solid var(--color-accent);
 }
 
 .faq-item summary {
@@ -642,10 +750,11 @@ img {
   cursor: pointer;
   list-style-position: outside;
   margin-left: 0.35rem;
+  color: var(--color-sacred-deep);
 }
 
 .faq-item summary::-webkit-details-marker {
-  color: var(--color-accent);
+  color: var(--color-gold-mid);
 }
 
 .faq-item[open] summary {
