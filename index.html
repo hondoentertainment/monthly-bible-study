@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Monthly community Bible study — Scripture, fellowship, and growing together across local churches."
+    />
+    <title>Monthly Bible Study</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="site-header__inner container">
+        <a class="logo" href="#top" aria-label="Monthly Bible Study home">
+          <span class="logo__mark" aria-hidden="true">✝</span>
+          <span class="logo__text">Monthly Bible Study</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <button
+            type="button"
+            class="nav__toggle"
+            aria-expanded="false"
+            aria-controls="nav-panel"
+          >
+            Menu
+          </button>
+          <ul id="nav-panel" class="nav__list">
+            <li><a href="#gathering">Gathering</a></li>
+            <li><a href="#churches">Churches</a></li>
+            <li><a href="#sessions">Past sessions</a></li>
+            <li><a href="#photos">Photos</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li>
+              <!-- Replace href with your Partiful event URL -->
+              <a
+                class="nav__cta"
+                href="https://partiful.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >RSVP on Partiful</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section id="top" class="hero">
+        <div class="hero__bg" aria-hidden="true"></div>
+        <div class="container hero__inner">
+          <p class="eyebrow">Community • Scripture • Prayer</p>
+          <h1 class="hero__title">Grow in God’s Word together</h1>
+          <p class="hero__lede">
+            A monthly gathering for believers across our city — one study, many
+            churches, rooted in Scripture and shaped by fellowship.
+          </p>
+          <div class="hero__actions">
+            <!-- Replace with your Partiful event link -->
+            <a
+              class="btn btn--primary"
+              href="https://partiful.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Reserve your seat — Partiful</a
+            >
+            <a class="btn btn--ghost" href="#sessions">Browse past verses</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="gathering" class="section section--muted">
+        <div class="container narrow">
+          <h2 class="section__title">Next gathering</h2>
+          <p class="section__intro">
+            We meet once a month for teaching, discussion, and prayer. RSVP on
+            <strong>Partiful</strong> so we can welcome you and share location
+            details.
+          </p>
+          <ul class="info-list">
+            <li><span class="info-list__label">When</span> First Thursday, 7:00 p.m.</li>
+            <li><span class="info-list__label">Bring</span> Your Bible &amp; an open heart</li>
+          </ul>
+          <div class="gathering-actions">
+            <a
+              class="btn btn--primary"
+              href="https://partiful.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Open Partiful invite</a
+            >
+            <p class="fine-print">
+              Set your event URL once in <code>js/config.js</code>
+              (<code>partifulUrl</code>) — all Partiful buttons update automatically.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="churches" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Participating churches</h2>
+            <p class="section__intro section__intro--inline">
+              Many congregations. One Body. Edit this list to match who helps
+              host, promote, or attend.
+            </p>
+          </div>
+          <div class="card-grid churches-grid" role="list">
+            <article class="church-card" role="listitem">
+              <h3 class="church-card__name">Grace Community Church</h3>
+              <p class="church-card__loc">Riverdale</p>
+              <a class="church-card__link" href="#">Website</a>
+            </article>
+            <article class="church-card" role="listitem">
+              <h3 class="church-card__name">Hope Fellowship</h3>
+              <p class="church-card__loc">Midtown</p>
+              <a class="church-card__link" href="#">Website</a>
+            </article>
+            <article class="church-card" role="listitem">
+              <h3 class="church-card__name">Covenant Presbyterian</h3>
+              <p class="church-card__loc">West End</p>
+              <a class="church-card__link" href="#">Website</a>
+            </article>
+            <article class="church-card" role="listitem">
+              <h3 class="church-card__name">New Life Anglican</h3>
+              <p class="church-card__loc">Lakeside</p>
+              <a class="church-card__link" href="#">Website</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="sessions" class="section section--muted">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Past sessions</h2>
+            <p class="section__intro section__intro--inline">
+              Each month we linger on passages that shaped our conversation —
+              memorize, meditate, and revisit them anytime.
+            </p>
+          </div>
+          <div class="sessions-timeline">
+            <article class="session-card">
+              <p class="session-card__meta">November 2025</p>
+              <h3 class="session-card__theme">Faith that works</h3>
+              <blockquote class="verse" cite="https://www.biblegateway.com/passage/?search=James+2%3A14-18&version=NIV">
+                <p class="verse__text">
+                  “What good is it, my brothers and sisters, if someone claims to
+                  have faith but has no deeds? Can such faith save them?”
+                </p>
+                <footer class="verse__ref">James 2:14 (NIV)</footer>
+              </blockquote>
+              <blockquote class="verse verse--secondary" cite="https://www.biblegateway.com/passage/?search=Hebrews+11%3A1&version=NIV">
+                <p class="verse__text">
+                  “Now faith is confidence in what we hope for and assurance about
+                  what we do not see.”
+                </p>
+                <footer class="verse__ref">Hebrews 11:1 (NIV)</footer>
+              </blockquote>
+            </article>
+            <article class="session-card">
+              <p class="session-card__meta">October 2025</p>
+              <h3 class="session-card__theme">The shepherd’s care</h3>
+              <blockquote class="verse" cite="https://www.biblegateway.com/passage/?search=Psalm+23&version=NIV">
+                <p class="verse__text">
+                  “The Lord is my shepherd, I lack nothing. He makes me lie down in
+                  green pastures, he leads me beside quiet waters…”
+                </p>
+                <footer class="verse__ref">Psalm 23:1–2 (NIV)</footer>
+              </blockquote>
+            </article>
+            <article class="session-card">
+              <p class="session-card__meta">September 2025</p>
+              <h3 class="session-card__theme">Abiding in Christ</h3>
+              <blockquote class="verse" cite="https://www.biblegateway.com/passage/?search=John+15%3A4-5&version=NIV">
+                <p class="verse__text">
+                  “Remain in me, as I also remain in you… apart from me you can do
+                  nothing.”
+                </p>
+                <footer class="verse__ref">John 15:4–5 (NIV)</footer>
+              </blockquote>
+            </article>
+            <article class="session-card">
+              <p class="session-card__meta">August 2025</p>
+              <h3 class="session-card__theme">The peace of God</h3>
+              <blockquote class="verse" cite="https://www.biblegateway.com/passage/?search=Philippians+4%3A6-7&version=NIV">
+                <p class="verse__text">
+                  “Do not be anxious about anything, but in every situation, by prayer
+                  and petition, with thanksgiving, present your requests to God.”
+                </p>
+                <footer class="verse__ref">Philippians 4:6 (NIV)</footer>
+              </blockquote>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="photos" class="section">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Photo gallery</h2>
+            <p class="section__intro section__intro--inline">
+              Moments from worship nights, breakout discussions, and shared meals.
+              Swap image URLs for your own photos anytime.
+            </p>
+          </div>
+          <div class="photo-gallery" id="photo-gallery"></div>
+        </div>
+      </section>
+
+      <section id="videos" class="section section--muted">
+        <div class="container">
+          <div class="section__head">
+            <h2 class="section__title">Video gallery</h2>
+            <p class="section__intro section__intro--inline">
+              Teachings and testimonies hosted on YouTube or Vimeo embed
+              below — replace IDs with yours.
+            </p>
+          </div>
+          <div class="video-grid">
+            <figure class="video-frame">
+              <div class="video-frame__aspect">
+                <iframe
+                  title="Sample Scripture reflection (replace with your video)"
+                  src="https://www.youtube-nocookie.com/embed/psTh7lUO7fw"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <figcaption>Welcome message — substitute your playlist or sermon series.</figcaption>
+            </figure>
+            <figure class="video-frame">
+              <div class="video-frame__aspect">
+                <iframe
+                  title="Sample hymn or worship moment (placeholder)"
+                  src="https://www.youtube-nocookie.com/embed/Y_1JqxTwcLM"
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <figcaption>Hymn of the month — swap embed URL.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p class="site-footer__brand">Monthly Bible Study</p>
+        <p class="site-footer__copy">
+          “Let the word of Christ dwell in you richly…”
+          <span class="site-footer__ref">Colossians 3:16</span>
+        </p>
+        <a class="footer-link" href="https://partiful.com/" target="_blank" rel="noopener noreferrer">RSVP on Partiful</a>
+      </div>
+    </footer>
+
+    <div
+      id="lightbox"
+      class="lightbox"
+      hidden
+      role="dialog"
+      aria-modal="true"
+      aria-label="Enlarged image"
+    >
+      <button type="button" class="lightbox__close" aria-label="Close">×</button>
+      <img class="lightbox__img" alt="" decoding="async" />
+      <p class="lightbox__caption"></p>
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
