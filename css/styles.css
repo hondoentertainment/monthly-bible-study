@@ -417,36 +417,48 @@ img {
 }
 
 /* —— Study passages —— */
-.passage-index {
+.study-passages {
   background: #fff;
   border: 1px solid var(--color-line);
   border-radius: var(--radius);
-  padding: 1.25rem 1.35rem;
+  padding: clamp(1.35rem, 3vw, 1.85rem);
   margin: 0 auto;
   max-width: 42rem;
   box-shadow: var(--shadow-soft);
 }
 
-.passage-index__title {
+.study-passages .verse:last-child {
+  margin-bottom: 0;
+}
+
+.verse {
+  margin: 0 0 1.25rem;
+  padding: 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--color-accent);
   font-family: var(--font-serif);
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 0 0 0.75rem;
 }
 
-.passage-index__lead {
-  margin: 0 0 1.15rem;
-  color: var(--color-ink-muted);
-  font-size: 0.98rem;
-  line-height: 1.55;
+.verse--secondary {
+  border-left-color: var(--color-cream-dark);
 }
 
-.passage-index__cta {
+.verse__text {
   margin: 0;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--color-ink);
+  line-height: 1.5;
 }
 
-.passage-index__cta .btn {
-  margin: 0;
+.verse__ref {
+  display: block;
+  margin-top: 0.5rem;
+  font-family: var(--font-sans);
+  font-style: normal;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-accent);
 }
 
 /* —— Photo gallery —— */
