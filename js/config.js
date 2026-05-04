@@ -7,10 +7,10 @@ window.MONTHLY_BIBLE_STUDY_CONFIG = {
   /** Photo gallery: first entry is event artwork served by Partiful (imgix CDN). */
   galleryPhotos: [
     {
-      src:
-        'https://partiful.imgix.net/external/user/6UEW2WfIaaebodx5qjn1PwWlmFF2/VOWYRW9XAOU0seDNg5QBN?w=1200&h=800&fit=crop&auto=format&q=85',
-      caption: 'From our Partiful invite — Little Red Hen / Green Lake',
-      alt: 'Event artwork from the Partiful listing for Monthly Bible Study',
+      src: 'images/little-red-hen-edition.png',
+      caption:
+        'Little Red Hen edition — apron & hat checkers match study accent red (#b32d38)',
+      alt: 'Little Red Hen mascot in a circular frame with red-and-white checkerboard apron and hat.',
     },
     {
       src: 'images/green-lake-community-01.png',
