@@ -4,9 +4,14 @@
 window.MONTHLY_BIBLE_STUDY_CONFIG = {
   /** Your Partiful event or profile link */
   partifulUrl: 'https://partiful.com/e/69cSAoPoO7TdA2RClIDq?',
-  /** Photo gallery items: use your own URLs (church photos, Unsplash with license, etc.) */
+  /** Photo gallery: first entry is event artwork served by Partiful (imgix CDN). */
   galleryPhotos: [
     {
+      src:
+        'https://partiful.imgix.net/external/user/6UEW2WfIaaebodx5qjn1PwWlmFF2/VOWYRW9XAOU0seDNg5QBN?w=1200&h=800&fit=crop&auto=format&q=85',
+      caption: 'From our Partiful invite — Little Red Hen / Green Lake',
+      alt: 'Event artwork from the Partiful listing for Monthly Bible Study',
+    },
       src: 'https://images.unsplash.com/photo-1507692049940-956ca1dad4d4?auto=format&fit=crop&w=900&q=80',
       caption: 'Open Bibles — replace with your event photo',
       alt: 'Open Bible on wooden table near window light',
