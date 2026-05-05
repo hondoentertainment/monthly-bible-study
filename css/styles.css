@@ -524,7 +524,27 @@ img {
   box-shadow: var(--shadow-card), inset 0 0 0 1px rgba(255, 255, 255, 0.7);
 }
 
-.study-passages .verse:last-child {
+.study-session + .study-session {
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(159, 123, 47, 0.2);
+}
+
+.study-session__date {
+  margin: 0 0 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.study-session__date time {
+  font-weight: inherit;
+}
+
+.study-session .verse:last-child {
   margin-bottom: 0;
 }
 
